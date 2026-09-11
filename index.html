@@ -2410,7 +2410,7 @@ admBody.addEventListener('input', e => {
   if (e.target.id === 'custSearch') { A.custQ = e.target.value; A.custPage = 1; const pos = e.target.selectionStart; renderAdmin(); const i = $('#custSearch'); i.focus(); i.setSelectionRange(pos, pos); }
 });
 // deep links for presenting: index.html#book / index.html#admin
-const deepPath = location.pathname.replace(//+$/, '').split('/').pop();
+const deepPath = location.pathname.replace(/\/+$/, '').split('/').pop();
 if (location.hash === '#book' || deepPath === 'book') setTimeout(() => openBooking(), 50);
 if (location.hash === '#admin' || deepPath === 'admin') setTimeout(() => openAdmin(), 50);
 window.addEventListener('hashchange', () => { if (location.hash === '#book') openBooking(); if (location.hash === '#admin') openAdmin(); });
