@@ -2,7 +2,7 @@
 <html lang="en-MY">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Aina Lash Atelier</title>
 <meta name="description" content="Aina Lash Atelier — premium eyelash extensions in Bangsar, Kuala Lumpur. Book online, pay a deposit, settle the balance at the studio.">
 <meta property="og:type" content="website">
@@ -18,7 +18,7 @@
 <style>
 :root{
   --paper:#FBFAF7;--paper-2:#FFFFFF;--sand:#F3EEE7;--sand-2:#EAE3DA;--line:#E4DDD4;--line-2:#CFC5B9;
-  --ink:#171412;--ink-2:#3E3833;--mink:#7A6F66;--mute:#A79C91;
+  --ink:#171412;--ink-2:#3E3833;--mink:#736961;--mute:#978C81;
   --rose:#8C5A52;--rose-2:#6E4640;--blush:#F1E6E1;
   --espresso:#1B1614;--espresso-2:#26201C;--on-dark:#F3EDE6;--on-dark-2:#B9AEA3;--line-dark:#3A322D;
   --ok:#4C7A5B;--ok-bg:#E6EFE8;--warn:#A2741F;--warn-bg:#F6EEDA;--bad:#A3463F;--bad-bg:#F5E4E2;--info:#4E6A87;--info-bg:#E5ECF3;
@@ -878,7 +878,107 @@ em.it{font-style:italic;font-weight:400}
 /* mobile admin */
 @media (max-width:1100px){.today-grid{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}.pay-stats{grid-template-columns:repeat(2,1fr)}.pay-stats .stat:nth-child(2n){border-right:0}.pay-stats .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 @media (max-width:820px){.adm-top{padding:0 16px;gap:16px}.adm-tabs{position:fixed;top:60px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);height:auto;overflow-x:auto;padding:0 8px}.adm-tabs button{padding:12px 12px}.adm-tabs button::after{bottom:0}.adm-body{padding:70px 16px 80px}.adm-top .date{display:none}.cust-top{grid-template-columns:1fr}.appt{font-size:11px;padding:6px 8px}.list-day li{grid-template-columns:70px 1fr auto}.list-day li .chip{display:none}}
-@media (max-width:560px){.adm-top .exit{display:none}.sched-lanes .lane-h span{display:none}.ledger-stats{grid-template-columns:1fr}.stat{border-right:0}.stat:nth-last-child(-n+2){border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}}
+@media (max-width:560px){.adm-top .exit{font-size:11px}.sched-lanes .lane-h span{display:none}.ledger-stats{grid-template-columns:1fr}.stat{border-right:0}.stat:nth-last-child(-n+2){border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:0}}
+
+/* ================= MOBILE & TOUCH ================= */
+button,a,summary,label{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.wa{pointer-events:none}
+.wa-btn,.wa.open .wa-panel{pointer-events:auto}
+.bk,.adm,.drawer,.mnav,.wa-body{overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.adm-tabs{scrollbar-width:none}.adm-tabs::-webkit-scrollbar{display:none}
+.svc{cursor:pointer}
+.stepper-m{display:none;margin-bottom:26px}
+.stepper-m .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.stepper-m b{font-weight:500;font-size:14px}
+.stepper-m .bar{height:2px;background:var(--line);margin-top:10px;position:relative}
+.stepper-m .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--ink);transition:width .4s var(--ease)}
+.pay-bar .pay-mini,.pay-bar > .btn{display:none}
+.pay-mini{display:flex;flex-direction:column;gap:2px}
+.pay-mini .label{font-size:10px}
+.pay-mini b{font-family:var(--serif);font-size:24px;line-height:1;font-weight:400}
+@media (max-width:900px){
+  .bk-actions{position:sticky;bottom:0;background:var(--paper);margin:36px calc(-1 * var(--gut)) 0;padding:12px var(--gut) calc(12px + env(safe-area-inset-bottom));border-top:1px solid var(--line);z-index:2;gap:14px;flex-wrap:nowrap}
+  .bk-actions .btn{flex:1;justify-content:space-between;min-height:52px}
+  .bk-actions .back{flex:none;padding:12px 0}
+  .bk-actions .small{display:none}
+  .pay-bar .pay-mini{display:flex}
+  .pay-bar > .btn{display:inline-flex}
+  .pay-sum .btn{display:none}
+  .stepper{display:none}
+  .stepper-m{display:block}
+  .bk-main{padding-bottom:0}
+  .tlink{padding:10px 0 4px}
+  .rv-edit,.pl-tools button,.panel-h a,.panel-h button.lnk,.cal-legend{padding:6px 0}
+  .wa{right:16px;bottom:calc(16px + env(safe-area-inset-bottom))}
+  .cal-nav button{width:42px;height:42px}
+  .artist-pick button{padding:12px 16px}
+  .tslot{padding:14px 8px;font-size:14px}
+  .day{font-size:15px}
+  .day .few{font-size:9.5px}
+  .dr-h .x{width:40px;height:40px}
+  .filters button{padding:10px 12px}
+  .pager button{width:36px;height:36px}
+  .conf-actions .btn{flex:1 1 auto;justify-content:space-between}
+  .adm-h .tools .btn{flex:1;justify-content:space-between}
+  .adm-h .tools{width:100%}
+  .attn li .btn.xs{padding:10px 12px}
+  .method-pick button{padding:12px 6px}
+}
+@media (max-width:560px){
+  .menu-row{grid-template-columns:1fr auto;grid-template-areas:"n p" "d p";gap:2px 16px}
+  .menu-row .n{grid-area:n}
+  .menu-row .p{grid-area:p;align-self:start}
+  .menu-row .d{display:block;grid-area:d;text-align:left;min-width:0}
+  .toolbar .search{flex:1 1 100%;min-width:0;height:42px}
+  .foot-grid{gap:28px 20px}
+  .foot li{line-height:2.2}
+  .hero-cta{gap:22px}
+  .hero-cta .btn{width:100%;justify-content:space-between;min-height:54px}
+  .strip .v{font-size:14.5px;line-height:1.5}
+  .svc-foot{margin-top:14px}
+  .svc-foot .tlink{padding:12px 0 6px}
+  .why{padding:26px 22px}
+  .why .stat{font-size:48px}
+  .final .cta .btn{width:100%;justify-content:space-between}
+  .faq summary{padding:20px 0}
+  .faq .ans{padding-right:24px}
+  .testi q{font-size:21px}
+  .about-txt .lead{font-size:16.5px}
+  .lead{font-size:16.5px}
+  .bk-h{font-size:30px}
+  .choice-row{padding:20px 0}
+  .choice-row .cn{font-size:22px}
+  .conf .bk-h{font-size:32px}
+  .conf-block .big{font-size:24px}
+  .login-box{padding:28px 22px}
+  .adm-body{padding:70px 12px 80px}
+  .panel-h{padding:14px 16px}
+  .stat{padding:16px}
+  .attn li{padding:12px 16px;grid-template-columns:1fr auto}
+  .recent li{padding:10px 16px}
+  .settle{padding:14px 16px}
+  .bar-row{padding:10px 16px;grid-template-columns:90px 1fr auto}
+  .dr-b{padding:8px 18px 24px}
+  .dr-h{padding:18px 18px}
+  .kv{grid-template-columns:96px 1fr}
+  .list-day{padding:0 16px}
+}
+/* card layout for admin tables on phones */
+@media (max-width:700px){
+  .tbl.cards{min-width:0;display:block}
+  .tbl.cards thead{display:none}
+  .tbl.cards tbody{display:block}
+  .tbl.cards tr{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;padding:16px;border-bottom:1px solid var(--line)}
+  .tbl.cards tbody tr:last-child{border-bottom:0}
+  .tbl.cards td{display:block;padding:0;border:0;text-align:left;white-space:normal}
+  .tbl.cards td[data-l]::before{content:attr(data-l);display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mink);margin-bottom:3px;font-weight:500}
+  .tbl.cards td.name{grid-column:1/-1;order:-2}
+  .tbl.cards td.name b{font-size:16px;font-family:var(--serif);font-weight:400;font-size:20px;line-height:1.15;margin-bottom:2px}
+  .tbl.cards td.st{order:-1;grid-column:1/-1;margin-top:-6px}
+  .tbl.cards td.num{text-align:left}
+  .tbl.cards td .sub{margin-top:2px}
+  .tbl.cards td.mono{font-size:12px}
+}
 </style>
 </head>
 <body>
@@ -1294,7 +1394,7 @@ em.it{font-style:italic;font-weight:400}
       <nav class="adm-tabs" id="admTabs"></nav>
       <div class="right">
         <span class="date" id="admDate"></span>
-        <button class="exit" data-adm-exit>Back to website</button>
+        <button class="exit" data-adm-exit>Exit to website</button>
         <span class="av" title="Aina Rosli">AR</span>
       </div>
     </div>
@@ -1569,7 +1669,7 @@ $$('[data-mnav]').forEach(a => a.addEventListener('click', () => { mnav.classLis
 const fillHTML = n => n ? '<span class="fill" aria-label="Fullness ' + n + ' of 4">' + [1,2,3,4,5].map(i => '<i class="' + (i <= n + (n === 4 ? 1 : 0) && i <= n ? 'f' : (n >= 4 ? 'f' : '')) + '"></i>').join('') + '</span>' : '';
 function fillMarks(n){ if (!n) return ''; const on = {1:[3],2:[2,3],3:[2,3,4],4:[1,2,3,4,5]}[n]; return '<span class="fill" aria-label="Fullness ' + n + ' of 4">' + [1,2,3,4,5].map(i => '<i class="' + (on.includes(i) ? 'f' : '') + '"></i>').join('') + '</span>'; }
 $('#svcList').innerHTML = SERVICES.map((s, i) => `
-  <li class="svc${i === 0 ? ' on' : ''}" data-svc="${s.id}">
+  <li class="svc${i === 0 ? ' on' : ''}" data-svc="${s.id}" data-book="${s.id}">
     <div>
       <div class="svc-head"><h3 class="h3">${esc(s.name)}</h3>${fillMarks(s.fill)}</div>
       <p class="svc-desc">${esc(s.desc)}</p>
@@ -1704,7 +1804,7 @@ function renderSide(){
 }
 
 function stepper(){
-  return '<ol class="stepper">' + STEPS.map((n, i) => { const k = i + 1; const cls = k === B.step ? 'on' : k < B.step ? 'done' : ''; return `<li class="${cls}" ${k < B.step ? 'data-goto="' + k + '"' : ''}><span class="n">${k < B.step ? '✓' : pad(k)}</span>${esc(n)}</li>`; }).join('') + '</ol>';
+  return '<ol class="stepper">' + STEPS.map((n, i) => { const k = i + 1; const cls = k === B.step ? 'on' : k < B.step ? 'done' : ''; return `<li class="${cls}" ${k < B.step ? 'data-goto="' + k + '"' : ''}><span class="n">${k < B.step ? '✓' : pad(k)}</span>${esc(n)}</li>`; }).join('') + '</ol>' + `<div class="stepper-m"><div class="row"><span class="label">Step ${B.step} of ${STEPS.length}</span><b>${esc(STEPS[B.step - 1])}</b></div><div class="bar"><i style="width:${Math.round(B.step / STEPS.length * 100)}%"></i></div></div>`;
 }
 
 function renderMain(){
@@ -1867,7 +1967,7 @@ function stepPayment(){
       <p class="secure"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="5" width="8" height="6"/><path d="M4 5V3.5a2 2 0 0 1 4 0V5"/></svg>Encrypted checkout. Card and bank details never touch the studio’s systems.</p>
     </aside>
   </div>
-  <div class="bk-actions">${B.viaLink ? '<span class="small">Prefer to pay at the studio? Just close this — cash, card and DuitNow QR are all fine.</span>' : '<button class="back" data-goto="' + (B.payingBalance ? 6 : 4) + '">← Back</button>'}<span class="small">Demo — no real money moves.</span></div>`;
+  <div class="bk-actions pay-bar">${B.viaLink ? '<span class="small">Prefer to pay at the studio? Just close this — cash, card and DuitNow QR are all fine.</span>' : '<button class="back" data-goto="' + (B.payingBalance ? 6 : 4) + '">← Back</button>'}<span class="pay-mini"><span class="label">Pay now</span><b>${RM2(amt)}</b></span><button class="btn" data-pay ${B.method === 'fpx' && !B.bank ? 'disabled' : ''}>Pay <span class="ar"></span></button><span class="small">Demo — no real money moves.</span></div>`;
 }
 function pendingRef(){ return 'ALA-' + String(NOW.getFullYear()).slice(2) + pad(NOW.getMonth() + 1) + '-' + pad(REF_SEQ + 1).padStart(4, '0'); }
 function drawQR(canvas){
@@ -2150,12 +2250,12 @@ function bookingRow(b){
   const c = custOf(b), s = svcOf(b), ps = payState(b), bs = bookState(b), bal = balance(b), dep = b.payments.find(p => p.type === 'deposit');
   const cancelledish = b.status === 'cancelled' || b.status === 'no_show';
   return `<tr data-open-booking="${b.id}" class="${A.drawer === b.id ? 'sel' : ''}">
-    <td class="mono">${b.session ? '<i class="new-dot"></i>' : ''}${esc(b.ref)}</td>
+    <td class="mono" data-l="Ref">${b.session ? '<i class="new-dot"></i>' : ''}${esc(b.ref)}</td>
     <td class="name"><b>${esc(c.name)}</b><span>${esc(c.phone)}</span></td>
-    <td>${esc(s.name)}<span class="sub">${esc(artistOf(b).short)} · ${fmtDur(b.mins)}</span></td>
-    <td><span class="mono">${esc(fmtShort(b.date))}</span><span class="sub">${fmtTime(b.start)} – ${fmtTime(endOf(b))}</span></td>
-    <td class="num">${dep ? RM(dep.amount) : '—'}<span class="sub">${dep ? esc(dep.method.split(' · ')[0]) : ''}</span></td>
-    <td class="num ${cancelledish ? '' : bal > 0 ? 'due' : 'ok'}">${cancelledish ? '—' : bal > 0 ? RM(bal) : 'Paid'}<span class="sub">${esc(ps.l)}</span></td>
+    <td data-l="Service">${esc(s.name)}<span class="sub">${esc(artistOf(b).short)} · ${fmtDur(b.mins)}</span></td>
+    <td data-l="When"><span class="mono">${esc(fmtShort(b.date))}</span><span class="sub">${fmtTime(b.start)} – ${fmtTime(endOf(b))}</span></td>
+    <td class="num" data-l="Deposit">${dep ? RM(dep.amount) : '—'}<span class="sub">${dep ? esc(dep.method.split(' · ')[0]) : ''}</span></td>
+    <td class="num ${cancelledish ? '' : bal > 0 ? 'due' : 'ok'}" data-l="Balance">${cancelledish ? '—' : bal > 0 ? RM(bal) : 'Paid'}<span class="sub">${esc(ps.l)}</span></td>
     <td class="st">${chip(bs.l, bs.c)}</td>
   </tr>`;
 }
@@ -2172,7 +2272,7 @@ function viewBookings(){
       <label class="search"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="6" cy="6" r="4.5"/><path d="m9.5 9.5 3 3"/></svg><input id="bkSearch" placeholder="Search name, phone, reference…" value="${esc(A.q)}"></label>
       <div class="filters">${FILTERS.map(f => `<button class="${A.filter === f[0] && !A.q ? 'on' : ''}" data-filter="${f[0]}">${f[1]}<span class="cnt">${filterBookings(f[0]).length}</span></button>`).join('')}</div>
     </div>
-    <div class="tbl-wrap">${slice.length ? `<table class="tbl"><thead><tr><th>Ref</th><th>Client</th><th>Service</th><th>Date &amp; time</th><th class="num">Deposit</th><th class="num">Balance</th><th>Status</th></tr></thead><tbody>${slice.map(bookingRow).join('')}</tbody></table>` : '<div class="tbl-empty">No bookings match.</div>'}</div>
+    <div class="tbl-wrap">${slice.length ? `<table class="tbl cards"><thead><tr><th>Ref</th><th>Client</th><th>Service</th><th>Date &amp; time</th><th class="num">Deposit</th><th class="num">Balance</th><th>Status</th></tr></thead><tbody>${slice.map(bookingRow).join('')}</tbody></table>` : '<div class="tbl-empty">No bookings match.</div>'}</div>
     <div class="tbl-foot"><span>${rows.length} booking${rows.length === 1 ? '' : 's'}${A.q ? ' matching “' + esc(A.q) + '” across all bookings' : ''} · page ${A.page} of ${pages}</span><div class="pager"><button data-page="${A.page - 1}" ${A.page <= 1 ? 'disabled' : ''}>‹</button>${Array.from({length:Math.min(pages, 7)}, (_, i) => { const p = pages <= 7 ? i + 1 : clamp(A.page - 3, 1, pages - 6) + i; return `<button class="${p === A.page ? 'on' : ''}" data-page="${p}">${p}</button>`; }).join('')}<button data-page="${A.page + 1}" ${A.page >= pages ? 'disabled' : ''}>›</button></div></div>
   </div>`;
 }
@@ -2227,8 +2327,8 @@ function viewCustomers(){
   </div>
   <div class="panel">
     <div class="toolbar"><label class="search"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="6" cy="6" r="4.5"/><path d="m9.5 9.5 3 3"/></svg><input id="custSearch" placeholder="Search name or phone…" value="${esc(A.custQ)}"></label><span class="spacer"></span><span class="small">Sorted by total spend</span></div>
-    <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Client</th><th>WhatsApp</th><th class="num">Visits</th><th class="num">Total paid</th><th>Last visit</th><th>Usual set</th><th>Next</th></tr></thead><tbody>
-      ${slice.map(x => `<tr data-open-cust="${x.c.id}" class="${A.drawer === x.c.id ? 'sel' : ''}"><td class="name"><b>${esc(x.c.name)}</b><span>${esc(x.c.area)}${x.c.note ? ' · has notes' : ''}</span></td><td class="mono">${esc(x.c.phone)}</td><td class="num">${x.done.length}</td><td class="num">${RM(x.spent)}${x.owed ? '<span class="sub" style="color:var(--rose)">' + RM(x.owed) + ' owed</span>' : ''}</td><td>${x.last ? esc(fmtShort(x.last)) : '—'}</td><td>${x.usual ? esc(SVC[x.usual].name) : '—'}</td><td>${x.nextB ? '<span class="mono">' + esc(fmtShort(x.nextB.date)) + '</span><span class="sub">' + esc(svcOf(x.nextB).name) + '</span>' : '<span class="small">—</span>'}</td></tr>`).join('')}
+    <div class="tbl-wrap"><table class="tbl cards"><thead><tr><th>Client</th><th>WhatsApp</th><th class="num">Visits</th><th class="num">Total paid</th><th>Last visit</th><th>Usual set</th><th>Next</th></tr></thead><tbody>
+      ${slice.map(x => `<tr data-open-cust="${x.c.id}" class="${A.drawer === x.c.id ? 'sel' : ''}"><td class="name"><b>${esc(x.c.name)}</b><span>${esc(x.c.area)}${x.c.note ? ' · has notes' : ''}</span></td><td class="mono" data-l="WhatsApp">${esc(x.c.phone)}</td><td class="num" data-l="Visits">${x.done.length}</td><td class="num" data-l="Total paid">${RM(x.spent)}${x.owed ? '<span class="sub" style="color:var(--rose)">' + RM(x.owed) + ' owed</span>' : ''}</td><td data-l="Last visit">${x.last ? esc(fmtShort(x.last)) : '—'}</td><td data-l="Usual set">${x.usual ? esc(SVC[x.usual].name) : '—'}</td><td data-l="Next">${x.nextB ? '<span class="mono">' + esc(fmtShort(x.nextB.date)) + '</span><span class="sub">' + esc(svcOf(x.nextB).name) + '</span>' : '<span class="small">—</span>'}</td></tr>`).join('')}
     </tbody></table></div>
     <div class="tbl-foot"><span>${list.length} clients · page ${A.custPage} of ${pages}</span><div class="pager"><button data-cpage="${A.custPage - 1}" ${A.custPage <= 1 ? 'disabled' : ''}>‹</button>${Array.from({length:Math.min(pages, 7)}, (_, i) => { const p = pages <= 7 ? i + 1 : clamp(A.custPage - 3, 1, pages - 6) + i; return `<button class="${p === A.custPage ? 'on' : ''}" data-cpage="${p}">${p}</button>`; }).join('')}<button data-cpage="${A.custPage + 1}" ${A.custPage >= pages ? 'disabled' : ''}>›</button></div></div>
   </div>`;
@@ -2262,8 +2362,8 @@ function viewPayments(){
   <div class="two-col">
     <div class="panel">
       <div class="toolbar"><div class="filters">${[['all','All'],['deposit','Deposits'],['balance','Balances'],['refund','Refunds']].map(f => `<button class="${A.payFilter === f[0] ? 'on' : ''}" data-payfilter="${f[0]}">${f[1]}</button>`).join('')}</div><span class="spacer"></span><span class="small">Newest first</span></div>
-      <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Received</th><th>Booking</th><th>Client</th><th>Type</th><th>Method</th><th class="num">Amount</th></tr></thead><tbody>
-        ${slice.map(p => `<tr data-open-booking="${p.b.id}"><td class="mono">${esc(fmtStamp(p.at))}</td><td class="mono">${esc(p.b.ref)}<span class="sub">${esc(svcOf(p.b).name)}</span></td><td class="name"><b>${esc(custOf(p.b).name)}</b></td><td>${typeChip(p.type)}</td><td>${esc(p.method)}</td><td class="num ${p.amount < 0 ? 'due' : ''}">${p.amount < 0 ? '− ' + RM(-p.amount) : RM(p.amount)}</td></tr>`).join('')}
+      <div class="tbl-wrap"><table class="tbl cards"><thead><tr><th>Received</th><th>Booking</th><th>Client</th><th>Type</th><th>Method</th><th class="num">Amount</th></tr></thead><tbody>
+        ${slice.map(p => `<tr data-open-booking="${p.b.id}"><td class="mono" data-l="Received">${esc(fmtStamp(p.at))}</td><td class="mono" data-l="Booking">${esc(p.b.ref)}<span class="sub">${esc(svcOf(p.b).name)}</span></td><td class="name"><b>${esc(custOf(p.b).name)}</b></td><td class="st">${typeChip(p.type)}</td><td data-l="Method">${esc(p.method)}</td><td class="num ${p.amount < 0 ? 'due' : ''}" data-l="Amount">${p.amount < 0 ? '− ' + RM(-p.amount) : RM(p.amount)}</td></tr>`).join('')}
       </tbody></table></div>
       <div class="tbl-foot"><span>${rows.length} transactions · page ${A.payPage} of ${pages}</span><div class="pager"><button data-ppage="${A.payPage - 1}" ${A.payPage <= 1 ? 'disabled' : ''}>‹</button>${Array.from({length:Math.min(pages, 7)}, (_, i) => { const p = pages <= 7 ? i + 1 : clamp(A.payPage - 3, 1, pages - 6) + i; return `<button class="${p === A.payPage ? 'on' : ''}" data-ppage="${p}">${p}</button>`; }).join('')}<button data-ppage="${A.payPage + 1}" ${A.payPage >= pages ? 'disabled' : ''}>›</button></div></div>
     </div>
